@@ -12,3 +12,32 @@
     "build": "webpack"
   },
 ```
+
+4. To render HTML `npm i -D html-webpack-plugin html-loader`
+5. Create `webpack.config.js`
+```
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {minimize:true}
+          },
+        ]
+      },
+    ]
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: './src/index.html',
+      filename: './index.html',
+    })
+  ]
+}
+```
+6. Build `npm rum build` -> open index.html from /dist folder
