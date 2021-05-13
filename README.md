@@ -1,7 +1,7 @@
 # Webpack-tutorial
 
 - [Design Course - Youtube](https://www.youtube.com/watch?v=TzdEpgONurw)
-
+- [Fireship IO - Youtube](https://www.youtube.com/watch?v=5IG4UmULyoA)
 ### Steps
 
 1. Init: `npm init`
@@ -55,3 +55,20 @@ and `npm run dev`
 - run `npm install --save-dev webpack-bundle-analyzer`
 - follow the docs on the [npm package](https://www.npmjs.com/package/webpack-bundle-analyzer) to use it as a plugin in webpack.config.js
 - run `npm run build --prod --stats-json`
+
+9. SCSS loaders and plugins:
+- install libs `npm i -D node-sass style-loader css-loader sass-loader mini-css-extract-plugin`
+- add rule to module.exports in webpack.config
+
+````
+...
+{
+  test: /\.scss$/,
+  use: [
+    'style-loader',
+    'css-loader',
+    'sass-loader',
+  ]
+},
+```
+- add `MiniCssExtractPlugin` in module.exports
