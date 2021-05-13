@@ -41,3 +41,12 @@ module.exports = {
 }
 ```
 6. Build `npm rum build` -> open index.html from /dist folder
+
+7. Dev serve -> `npm i -D webpack-dev-server`. Then add to scripts in package.json
+```
+  "scripts": {
+    ...
+    "dev": "webpack serve"
+  }
+```
+and `npm run dev`
