@@ -21,5 +21,8 @@ module.exports = {
       filename: './index.html',
     }),
     new BundleAnalyzerPlugin()
-  ]
+  ],
+  devServer:{
+    port:9000
+  }
 }
