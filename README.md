@@ -45,7 +45,7 @@ module.exports = {
 7. Dev serve -> `npm i -D webpack-dev-server`. Then add to scripts in package.json
 ```
   "scripts": {
-    ...
+    "build": "webpack",
     "dev": "webpack serve"
   }
 ```
@@ -54,7 +54,14 @@ and `npm run dev`
 8. Bundler Analyser:
 - run `npm install --save-dev webpack-bundle-analyzer`
 - follow the docs on the [npm package](https://www.npmjs.com/package/webpack-bundle-analyzer) to use it as a plugin in webpack.config.js
-- run `npm run build --prod --stats-json`
+- run `npm run build --prod --stats-json` (or add as a script in package.json)
+```
+"scripts": {
+  "build": "webpack",
+  "dev": "webpack serve",
+  "bundle-analyser": "npm run build --prod --stats-json"
+},
+```
 
 9. SCSS loaders and plugins:
 - install libs `npm i -D node-sass style-loader css-loader sass-loader mini-css-extract-plugin`
