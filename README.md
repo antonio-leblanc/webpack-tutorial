@@ -50,3 +50,8 @@ module.exports = {
   }
 ```
 and `npm run dev`
+
+8. Bundler Analyser:
+- run `npm install --save-dev webpack-bundle-analyzer`
+- follow the docs on the [npm package](https://www.npmjs.com/package/webpack-bundle-analyzer) to use it as a plugin in webpack.config.js
+- run `npm run build --prod --stats-json`

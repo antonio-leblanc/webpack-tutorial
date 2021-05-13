@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "bundle-analyser": "npm run build --prod --stats-json"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "webpack": "^5.37.0",
+    "webpack-bundle-analyzer": "^4.4.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
   }
