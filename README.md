@@ -2,6 +2,8 @@
 
 - [Design Course - Youtube](https://www.youtube.com/watch?v=TzdEpgONurw)
 - [Fireship IO - Youtube](https://www.youtube.com/watch?v=5IG4UmULyoA)
+
+![img](https://miro.medium.com/max/2560/1*5PpB0JEPdB30wER8_XWuIQ.jpeg)
 ### Steps
 
 1. Init: `npm init`
