@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   module: {
@@ -28,7 +29,12 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
-    new BundleAnalyzerPlugin()
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+    },
+    // new BundleAnalyzerPlugin(),
+    ),
   ],
   devServer:{
     port:9000
